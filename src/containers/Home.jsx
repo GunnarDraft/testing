@@ -32,7 +32,7 @@ const Home = () => {
     return (
         <div className='home'>
             <Suspense fallback={ <h2>Loading...</h2> }>
-                <SearchBar handleSearch={ e => handleSearch(e.target.value) } />
+                <SearchBar />
             </Suspense>
             <Suspense fallback={ <h2>Loading...</h2> }>
                 <CharacterCard />
