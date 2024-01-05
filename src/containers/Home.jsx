@@ -24,22 +24,16 @@ const Home = () => {
         }
     };
 
-    useEffect(() => { 
-        fetchData(); 
+    useEffect(() => {
+        fetchData();
     }, [searchTerm, page]);
 
- 
+
     return (
         <div className='home'>
-            <Suspense fallback={ <h2>Loading...</h2> }>
-                <SearchBar />
-            </Suspense>
-            <Suspense fallback={ <h2>Loading...</h2> }>
-                <CharacterCard />
-            </Suspense>
-            <Suspense fallback={ <h2>Loading...</h2> }>
-                <Pagination />
-            </Suspense>
+            <SearchBar />
+            <CharacterCard />
+            <Pagination />
         </div>
     );
 };
